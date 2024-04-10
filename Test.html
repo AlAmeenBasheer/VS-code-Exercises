@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+<div>
+<div id="test" style="background-color:blue;height:100px;width:557px;border:1px solid black;">
+</div>
+<button id="btn">Hide</button>
+<button id="btn1">Show</button>
+<button id="btn2">FadeOut</button>
+<button id="btn3">FadeIn</button>
+<button id="btn4">FadeToggle</button>
+<button id="btnSlideUp">SlideUp</button>
+<button id="btnSlideDown">SlideDown</button>
+<button id="btnSlideToggle">SlideToggle</button>
+<br>
+<a href="http://www.google.com">Click here to visit google</a>
+</div>
+<script>
+$(document).ready(function(){
+	  $("a").hover(function(){
+	    $(this).css("color", "red");
+	    }, function(){
+	    $(this).css("color", "blue");
+	  });
+});
+
+$(document).ready(function(){
+	  $("#btn").click(function(){
+		$("#test").hide();
+	  });
+	});
+$(document).ready(function(){
+	  $("#btn1").click(function(){
+		$("#test").show();
+	  });
+	});
+$(document).ready(function(){
+	  $("#btn2").click(function(){
+		$("#test").fadeOut("slow");
+	  });
+	});
+$(document).ready(function(){
+	  $("#btn3").click(function(){
+		$("#test").fadeIn(2000);
+	  });
+	});
+$(document).ready(function(){
+	  $("#btn4").click(function(){
+		$("#test").fadeToggle(2000);
+	  });
+	});
+$(document).ready(function(){
+	  $("#btnSlideUp").click(function(){
+		$("#test").slideUp();
+	  });
+	});
+$(document).ready(function(){
+	  $("#btnSlideDown").click(function(){
+		$("#test").slideDown(2000);
+	  });
+	});
+$(document).ready(function(){
+	  $("#btnSlideToggle").click(function(){
+		$("#test").slideToggle(2000);
+	  });
+	});
+</script>
+</body>
+</html>
